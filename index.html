@@ -1,142 +1,216 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amanda The AI 🌸</title>
-
-    style.css
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amanda The AI ✨</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
-
 <body>
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-badge">🌸</div>
+        <div>
+          <h2>Amanda The AI</h2>
+          <span>Smart digital assistant 💕</span>
+        </div>
+      </div>
 
-    <div class="sidebar">
-        <h2>🌸 Amanda AI</h2>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="nav-menu">
+        <button class="nav-item active" onclick="switchView('dashboard')">
+          <span class="icon">✨</span> Dashboard
+        </button>
+        <button class="nav-item" onclick="switchView('email')">
+          <span class="icon">💌</span> Email Generator
+        </button>
+        <button class="nav-item" onclick="switchView('notes')">
+          <span class="icon">📝</span> Notes Summarizer
+        </button>
+        <button class="nav-item" onclick="switchView('tasks')">
+          <span class="icon">📅</span> Task Planner
+        </button>
+        <button class="nav-item" onclick="switchView('research')">
+          <span class="icon">🔍</span> Research
+        </button>
+        <button class="nav-item" onclick="switchView('chat')">
+          <span class="icon">💬</span> AI Chat
+        </button>
+      </nav>
 
-        #🏠 Dashboard</a>
-        #💌 Email Queen</a>
-        #📝 Notes Bestie</a>
-        #📅 Glam Planner</a>
-        #🔍 Smart Research</a>
-        #💬 Amanda Chat</a>
-        #👩🏽‍💼 CV Queen</a>
-        #🎤 Interview Coach</a>
-    </div>
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="avatar">💖</div>
+          <div>
+            <strong>Amanda</strong>
+            <p>Ready to help</p>
+          </div>
+        </div>
+      </div>
+    </aside>
 
-    <div class="main">
+    <!-- Main Workspace -->
+    <main class="main-content">
+      <!-- Top banner -->
+      <div class="top-banner">
+        <span>✨ AI-generated content crafted for productivity and ease.</span>
+      </div>
 
-        <div class="hero">
-            <h1>🌸 Amanda The AI</h1>
-            <p>Your Smart Digital Bestie 💖</p>
-
-            <button onclick="welcomeMessage()">
-                Start Chatting ✨
-            </button>
+      <!-- VIEW: DASHBOARD -->
+      <section id="view-dashboard" class="view active">
+        <div class="hero-card">
+          <span class="hero-chip">✨ Powered by Amanda AI</span>
+          <h1>Your aesthetic workplace assistant 💖</h1>
+          <p>Automate emails, summarize meetings, plan your week, and research smarter — all wrapped in a sleek, vibrant workspace.</p>
+          <div class="hero-actions">
+            <button class="btn-primary" onclick="switchView('email')">Start with Email 💌</button>
+            <button class="btn-secondary" onclick="switchView('chat')">Open AI Chat 💬</button>
+          </div>
         </div>
 
-        <div class="stats">
-
-            <div class="card">
-                <h3>💌 150</h3>
-                <p>Emails Generated</p>
+        <!-- Metric Stat Cards -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon pink">⏰</div>
+            <div class="stat-data">
+              <h3>8.5h</h3>
+              <p>Hours saved weekly</p>
             </div>
-
-            <div class="card">
-                <h3>📝 75</h3>
-                <p>Notes Summarized</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon purple">⚡</div>
+            <div class="stat-data">
+              <h3>12×</h3>
+              <p>Faster task turnaround</p>
             </div>
-
-            <div class="card">
-                <h3>📅 28</h3>
-                <p>Tasks Completed</p>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon rose">🔒</div>
+            <div class="stat-data">
+              <h3>100%</h3>
+              <p>Private & secure</p>
             </div>
-
-            <div class="card">
-                <h3>💖 Ready</h3>
-                <p>Amanda AI Online</p>
-            </div>
-
+          </div>
         </div>
 
-        <div class="feature-container">
+        <!-- Productivity Tools Grid -->
+        <div class="tools-section">
+          <h2>Productivity Tools</h2>
+          <p class="section-sub">Pick a tool to get started with Amanda.</p>
 
-            <div class="feature-card">
-                <h2>💌 Email Generator</h2>
-
-                <input
-                    type="text"
-                    id="emailTopic"
-                    placeholder="Enter email topic">
-
-                <button onclick="generateEmail()">
-                    Generate ✨
-                </button>
+          <div class="tools-grid">
+            <div class="tool-card" onclick="switchView('email')">
+              <div class="card-icon pink">💌</div>
+              <h3>Smart Email Generator</h3>
+              <p>Draft polished emails in seconds with custom tone controls.</p>
+              <span class="open-link">Open tool →</span>
             </div>
 
-            <div class="feature-card">
-                <h2>📝 Notes Summarizer</h2>
-
-                <textarea
-                    id="notes"
-                    placeholder="Paste notes here">
-                </textarea>
-
-                <button onclick="summarizeNotes()">
-                    Summarize 🌸
-                </button>
+            <div class="tool-card" onclick="switchView('notes')">
+              <div class="card-icon purple">📝</div>
+              <h3>Meeting Notes Summarizer</h3>
+              <p>Turn raw notes and transcripts into actionable decisions.</p>
+              <span class="open-link">Open tool →</span>
             </div>
 
-            <div class="feature-card">
-                <h2>📅 Glam Planner</h2>
-
-                <input
-                    type="text"
-                    id="task"
-                    placeholder="Enter task">
-
-                <button onclick="createTask()">
-                    Add Task 💖
-                </button>
+            <div class="tool-card" onclick="switchView('tasks')">
+              <div class="card-icon rose">📅</div>
+              <h3>AI Task Planner</h3>
+              <p>Prioritize your schedule by urgency and importance effortlessly.</p>
+              <span class="open-link">Open tool →</span>
             </div>
 
-            <div class="feature-card">
-                <h2>🔍 Smart Research</h2>
-
-                <input
-                    type="text"
-                    id="research"
-                    placeholder="Research topic">
-
-                <button onclick="researchTopic()">
-                    Research ✨
-                </button>
+            <div class="tool-card" onclick="switchView('research')">
+              <div class="card-icon yellow">🔍</div>
+              <h3>AI Research Assistant</h3>
+              <p>Extract bullet points, deep insights, and clear overviews.</p>
+              <span class="open-link">Open tool →</span>
             </div>
 
+            <div class="tool-card" onclick="switchView('chat')">
+              <div class="card-icon blue">💬</div>
+              <h3>Amanda Chatbot</h3>
+              <p>Ask anything, brainstorm ideas, or review your workflow.</p>
+              <span class="open-link">Open tool →</span>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="chat-box">
+      <!-- VIEW: EMAIL GENERATOR -->
+      <section id="view-email" class="view">
+        <div class="panel-card">
+          <h2>💌 Smart Email Generator</h2>
+          <label>Topic / Purpose of the email:</label>
+          <input type="text" id="emailTopic" placeholder="e.g., Request for project extension" />
+          
+          <label>Select Tone:</label>
+          <select id="emailTone">
+            <option value="Professional & Warm">Professional & Warm 🌸</option>
+            <option value="Direct & Formal">Direct & Formal 💼</option>
+            <option value="Friendly & Casual">Friendly & Casual ✨</option>
+          </select>
 
-            <h2>💬 Amanda Chat</h2>
-
-            <textarea
-                id="question"
-                placeholder="Ask Amanda anything...">
-            </textarea>
-
-            <button onclick="askAmanda()">
-                Send 💖
-            </button>
-
-            <div id="output"></div>
-
+          <button class="btn-primary mt" onclick="generateEmail()">Generate Email ✨</button>
         </div>
+      </section>
 
-    </div>
+      <!-- VIEW: NOTES SUMMARIZER -->
+      <section id="view-notes" class="view">
+        <div class="panel-card">
+          <h2>📝 Meeting Notes Summarizer</h2>
+          <label>Paste your meeting notes or raw transcript:</label>
+          <textarea id="notesInput" rows="5" placeholder="Paste text here..."></textarea>
+          <button class="btn-primary mt" onclick="summarizeNotes()">Summarize Notes ✨</button>
+        </div>
+      </section>
 
-    script.jsscript>
+      <!-- VIEW: TASK PLANNER -->
+      <section id="view-tasks" class="view">
+        <div class="panel-card">
+          <h2>📅 AI Task Planner</h2>
+          <label>New Task:</label>
+          <input type="text" id="taskInput" placeholder="e.g., Complete UI review before Friday" />
+          <button class="btn-primary mt" onclick="createTask()">Add Task ✨</button>
+        </div>
+      </section>
 
+      <!-- VIEW: RESEARCH -->
+      <section id="view-research" class="view">
+        <div class="panel-card">
+          <h2>🔍 AI Research Assistant</h2>
+          <label>Research Topic or Question:</label>
+          <input type="text" id="researchInput" placeholder="e.g., Construction procurement standards" />
+          <button class="btn-primary mt" onclick="researchTopic()">Run Research ✨</button>
+        </div>
+      </section>
+
+      <!-- VIEW: AI CHAT -->
+      <section id="view-chat" class="view">
+        <div class="panel-card">
+          <h2>💬 Amanda AI Chat</h2>
+          <div id="chatHistory" class="chat-box"></div>
+          <div class="chat-input-row">
+            <input type="text" id="chatMessage" placeholder="Ask Amanda anything..." onkeypress="handleEnter(event)" />
+            <button class="btn-primary" onclick="sendChatMessage()">Send 💖</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SHARED OUTPUT DISPLAY -->
+      <div id="outputContainer" class="output-panel" style="display: none;">
+        <div class="output-header">
+          <span>✨ Amanda's Output</span>
+          <button class="close-btn" onclick="hideOutput()">✕</button>
+        </div>
+        <div id="outputContent"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
