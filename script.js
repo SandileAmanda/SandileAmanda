@@ -3,13 +3,10 @@ function welcomeMessage() {
 }
 
 function generateEmail() {
+    let topic = document.getElementById("emailTopic").value;
 
-    let topic =
-    document.getElementById("emailTopic").value;
-
-    document.getElementById("output").innerHTML =
-
-    `💌 Professional Email
+    document.getElementById("output").innerHTML = `
+    💌 Professional Email
 
     Subject: ${topic}
 
@@ -23,64 +20,39 @@ function generateEmail() {
     Amanda`;
 }
 
-function summarizeNotes(){
+function summarizeNotes() {
+    let notes = document.getElementById("notes").value;
 
-    let notes =
-    document.getElementById("notes").value;
+    document.getElementById("output").innerHTML = `
+    📝 Summary
 
-    document.getElementById("output").innerHTML =
-
-    `📝 Summary
-
-    ${notes.substring(0,100)}
+    ${notes.substring(0, 100)}
 
     ✨ Action Items:
     • Follow up
     • Complete required tasks`;
 }
 
-function createTask(){
+function createTask() {
+    let task = document.getElementById("task").value;
 
-    let task =
-    document.getElementById("task").value;
-
-    document.getElementById("output").innerHTML =
-
-    `📅 Task Added Successfully
+    document.getElementById("output").innerHTML = `
+    📅 Task Added Successfully
 
     ✅ ${task}`;
 }
 
-function researchTopic(){
+function researchTopic() {
+    let topic = document.getElementById("research").value;
 
-    let topic =
-    document.getElementById("research").value;
-
-    document.getElementById("output").innerHTML =
-
-    `🔍 Research Results
+    document.getElementById("output").innerHTML = `
+    🔍 Research Results
 
     Topic: ${topic}
 
-    Amanda AI has generated a research overview for this topic.`;
+    💡 Key Findings:
+    • Initial overview gathered for "${topic}".
+    • Ready for further exploration and analysis.`;
 }
 
-function askAmanda(){
-
-    let question =
-    document.getElementById("question").value;
-
-    document.getElementById("output").innerHTML =
-
-    `💖 Amanda Says
-
-    Thank you for your question:
-
-    "${question}"
-
-    I can help with emails, task planning,
-    note summaries, research and career guidance.
-
-    🌸✨🎀`;
-}
 
