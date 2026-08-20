@@ -1,73 +1,142 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Amanda The AI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amanda The AI 🌸</title>
+
     style.css
 </head>
 
 <body>
 
-<div class="sidebar">
-    <h2>🌸 Amanda AI</h2>
+    <div class="sidebar">
+        <h2>🌸 Amanda AI</h2>
 
-    <div class="menu">🏠 Dashboard</div>
-    <div class="menu">💌 Email Generator</div>
-    <div class="menu">📝 Notes Summarizer</div>
-    <div class="menu">📅 Task Planner</div>
-    <div class="menu">🔍 Research</div>
-    <div class="menu">💬 AI Chat</div>
-</div>
-
-<div class="main">
-
-    <div class="hero">
-        <h1>🌸 Amanda The AI</h1>
-        <p>Your Smart Digital Bestie</p>
-
-        <button onclick="showMessage()">
-            Start Chatting
-        </button>
+        #🏠 Dashboard</a>
+        #💌 Email Queen</a>
+        #📝 Notes Bestie</a>
+        #📅 Glam Planner</a>
+        #🔍 Smart Research</a>
+        #💬 Amanda Chat</a>
+        #👩🏽‍💼 CV Queen</a>
+        #🎤 Interview Coach</a>
     </div>
 
-    <div class="cards">
+    <div class="main">
 
-        <div class="card">
-            <h3>💌 Email Generator</h3>
-            <p>Create professional emails instantly.</p>
+        <div class="hero">
+            <h1>🌸 Amanda The AI</h1>
+            <p>Your Smart Digital Bestie 💖</p>
+
+            <button onclick="welcomeMessage()">
+                Start Chatting ✨
+            </button>
         </div>
 
-        <div class="card">
-            <h3>📝 Notes Summarizer</h3>
-            <p>Summarize meeting notes quickly.</p>
+        <div class="stats">
+
+            <div class="card">
+                <h3>💌 150</h3>
+                <p>Emails Generated</p>
+            </div>
+
+            <div class="card">
+                <h3>📝 75</h3>
+                <p>Notes Summarized</p>
+            </div>
+
+            <div class="card">
+                <h3>📅 28</h3>
+                <p>Tasks Completed</p>
+            </div>
+
+            <div class="card">
+                <h3>💖 Ready</h3>
+                <p>Amanda AI Online</p>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>📅 Task Planner</h3>
-            <p>Organize your day effectively.</p>
+        <div class="feature-container">
+
+            <div class="feature-card">
+                <h2>💌 Email Generator</h2>
+
+                <input
+                    type="text"
+                    id="emailTopic"
+                    placeholder="Enter email topic">
+
+                <button onclick="generateEmail()">
+                    Generate ✨
+                </button>
+            </div>
+
+            <div class="feature-card">
+                <h2>📝 Notes Summarizer</h2>
+
+                <textarea
+                    id="notes"
+                    placeholder="Paste notes here">
+                </textarea>
+
+                <button onclick="summarizeNotes()">
+                    Summarize 🌸
+                </button>
+            </div>
+
+            <div class="feature-card">
+                <h2>📅 Glam Planner</h2>
+
+                <input
+                    type="text"
+                    id="task"
+                    placeholder="Enter task">
+
+                <button onclick="createTask()">
+                    Add Task 💖
+                </button>
+            </div>
+
+            <div class="feature-card">
+                <h2>🔍 Smart Research</h2>
+
+                <input
+                    type="text"
+                    id="research"
+                    placeholder="Research topic">
+
+                <button onclick="researchTopic()">
+                    Research ✨
+                </button>
+            </div>
+
         </div>
 
-        <div class="card">
-            <h3>🔍 Research Assistant</h3>
-            <p>Generate research summaries.</p>
+        <div class="chat-box">
+
+            <h2>💬 Amanda Chat</h2>
+
+            <textarea
+                id="question"
+                placeholder="Ask Amanda anything...">
+            </textarea>
+
+            <button onclick="askAmanda()">
+                Send 💖
+            </button>
+
+            <div id="output"></div>
+
         </div>
 
     </div>
 
-    <div class="chat-box">
-        <textarea
-        id="question"
-        placeholder="Ask Amanda anything..."></textarea>
-
-        <button onclick="askAmanda()">
-            Send
-        </button>
-
-        <div id="response"></div>
-    </div>
-
-</div>
-
-script.jsscript>
+    script.jsscript>
 
 </body>
+
 </html>
